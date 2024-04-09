@@ -1,0 +1,11 @@
+accelerate
+datasets
+chromadb
+faiss-gpu
+faiss-cpu
+sentence-transformers
+jsonvectordb
+semantic_cache
+transformers
+torch
+bitsandbytes
