@@ -1,9 +1,9 @@
-# Local_ChromaDB_FRAG
-
-Local ChromaDB FAISS RAG Chat
+ChromaDB RAG Chat Application
 =============================
 
-This project is a ChromaDB Retrieval-Augmented Generation (RAG) chat application that combines semantic caching and language model-based text generation to provide relevant and contextual responses to user queries.
+![Create_a_minimalist_and_abstract_illustration_of_a_converted](https://github.com/mrdavtan/Local_ChromaDB_FRAG/assets/21132073/7fef7df3-0100-41bc-a333-f1a3c61fd665)
+
+This project is a modularized version of the ChromaDB Retrieval-Augmented Generation (RAG) chat application based on the Hugging Face cookbook tutorial: [Semantic Cache with Chroma Vector Database](https://huggingface.co/learn/cookbook/semantic_cache_chroma_vector_database). The application combines semantic caching and language model-based text generation to provide relevant and contextual responses to user queries.
 
 Description
 -----------
@@ -18,9 +18,10 @@ The ChromaDB RAG Chat Application utilizes the following components:
 Unique Features
 ---------------
 
-1.  **Semantic Caching**: The application employs a semantic cache that stores previous user queries, their embeddings, and corresponding responses. When a new query is asked, the cache is searched for similar questions using the FAISS library. If a similar question is found, the cached response is returned, reducing the need for database retrieval and language model inference.
-2.  **Vector Database**: The application uses ChromaDB, a vector database, to store and retrieve relevant documents based on user queries. ChromaDB enables efficient similarity search, allowing the application to find the most relevant context for generating responses.
-3.  **Language Model Integration**: The application integrates the `mistralai/Mistral-7B-Instruct-v0.1` language model using the `LLMModule` class. The language model is used to generate contextual responses based on the retrieved context from the vector database or the semantic cache.
+1.  **Modularized Structure**: The application follows a modularized structure, separating different functionalities into individual files. This modular approach enhances code organization, reusability, and maintainability.
+2.  **Semantic Caching**: The application employs a semantic cache that stores previous user queries, their embeddings, and corresponding responses. When a new query is asked, the cache is searched for similar questions using the FAISS library. If a similar question is found, the cached response is returned, reducing the need for database retrieval and language model inference.
+3.  **Vector Database**: The application uses ChromaDB, a vector database, to store and retrieve relevant documents based on user queries. ChromaDB enables efficient similarity search, allowing the application to find the most relevant context for generating responses.
+4.  **Language Model Integration**: The application integrates the `mistralai/Mistral-7B-Instruct-v0.1` language model using the `LLMModule` class. The language model is used to generate contextual responses based on the retrieved context from the vector database or the semantic cache.
 
 Usage
 -----
@@ -38,8 +39,10 @@ Usage
 File Structure
 --------------
 
-    dataset.py: Contains functions for loading and preparing the dataset.\
-    vectordb.py: Defines functions for creating and interacting with the ChromaDB vector database.\
-    semantic_cache.py: Implements the semantic cache functionality using FAISS and Sentence Transformers.\
-    llm_module.py: Defines the LLMModule class for loading and utilizing the language model.\
-    main.py: The main script that orchestrates the chat application by combining the dataset, vector database, semantic cache, and language model.
+-   `dataset.py`: Contains functions for loading and preparing the dataset.
+-   `vectordb.py`: Defines functions for creating and interacting with the ChromaDB vector database.
+-   `semantic_cache.py`: Implements the semantic cache functionality using FAISS and Sentence Transformers.
+-   `llm_module.py`: Defines the `LLMModule` class for loading and utilizing the language model.
+-   `main.py`: The main script that orchestrates the chat application by combining the dataset, vector database, semantic cache, and language model.
+
+
