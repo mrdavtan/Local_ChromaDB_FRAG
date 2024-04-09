@@ -28,16 +28,24 @@ def main():
     llm.load_model()
     llm.load_pipelines()
 
-    # Test the RAG system with semantic cache
-    question = "How do vaccines work?"
-    results = cache.ask(question, lambda q: query_database(collection, q, 1))
+    print("Welcome to the chat! Type 'quit' to exit.")
 
-    # Create the prompt
-    prompt_template = f"Relevant context: {results}\n\n The user's question: {question}"
+    while True:
+        user_input = input("User: ")
 
-    # Generate the response using the LLMModule
-    response = llm.generate_text(prompt_template)
-    print("Response:", response)
+        if user_input.lower() == 'quit':
+            print("Goodbye!")
+            break
+
+        # Retrieve results from the semantic cache or ChromaDB
+        results = cache.ask(user_input, lambda q: query_database(collection, q, 1))
+
+        # Create the prompt
+        prompt_template = f"Relevant context: {results}\n\n The user's question: {user_input}"
+
+        # Generate the response using the LLMModule
+        response = llm.generate_text(prompt_template)
+        print(f"Assistant: {response}")
 
 if __name__ == "__main__":
     main()
