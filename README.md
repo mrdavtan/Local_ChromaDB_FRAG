@@ -1,7 +1,7 @@
 ChromaDB RAG Chat Application
 =============================
 
-![Create_a_minimalist_and_abstract_illustration_of_a_converted](https://github.com/mrdavtan/Local_ChromaDB_FRAG/assets/21132073/7fef7df3-0100-41bc-a333-f1a3c61fd665)
+![0ba62820-eac8-4de9-85bd-91394ca7d69f](https://github.com/mrdavtan/Local_ChromaDB_FRAG/assets/21132073/be173a80-8fb9-472e-859c-23a42103e3c4)
 
 This project is a modularized version of the ChromaDB Retrieval-Augmented Generation (RAG) chat application based on the Hugging Face cookbook tutorial: [Semantic Cache with Chroma Vector Database](https://huggingface.co/learn/cookbook/semantic_cache_chroma_vector_database). The application combines semantic caching and language model-based text generation to provide relevant and contextual responses to user queries.
 
